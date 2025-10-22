@@ -34,7 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
     ticking = false;
   }
 
-  // Otimização com requestAnimationFrame
   function requestTick() {
     if (!ticking) {
       requestAnimationFrame(updateParallax);

@@ -74,29 +74,32 @@ body p {
   z-index: 1;
 }
 
-.robot-left-layer {
-  object-fit: contain;
+.robot-left-layer,
+.robot-right-layer {
   position: absolute;
   pointer-events: none;
+  z-index: 1;
+  /* Parallax vai aplicar transform aqui */
+}
+
+.robot-left-layer {
   left: 40px;
   top: 10%;
-  z-index: 1;
-  width: 25%;
+  width: 30%;
   max-width: 300px;
-  height: auto;
-  animation: wiggle 2s ease-in-out infinite;
 }
 
 .robot-right-layer {
-  object-fit: contain;
-  position: absolute;
-  pointer-events: none;
-  left: auto;
   right: 40px;
-  top: 25%;
-  z-index: 1;
+  top: 35%;
   width: 20%;
   max-width: 300px;
+}
+
+/* Wiggle aplicado na imagem interna */
+.robot-wiggle {
+  object-fit: contain;
+  width: 100%;
   height: auto;
   animation: wiggle 2s ease-in-out infinite;
 }
@@ -110,7 +113,6 @@ body p {
     transform: rotate(3deg);
   }
 }
-
 .hero-content {
   position: fixed;
   top: 50%;
