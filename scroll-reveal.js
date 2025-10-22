@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);
 
-  // Animação de seções
+  // animação sections
   gsap.utils.toArray(".section").forEach((section) => {
     gsap.from(section, {
       scrollTrigger: {
         trigger: section,
         start: "top 80%",
-        toggleActions: "play none none none",
+        toggleActions: "play reverse play reverse"
       },
       opacity: 0,
       y: 50,
@@ -16,13 +16,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Animação de cards com stagger
+  // Animação Cards
   gsap.utils.toArray(".cards-grid").forEach((grid) => {
     gsap.to(grid.querySelectorAll(".card"), {
       scrollTrigger: {
         trigger: grid,
         start: "top 85%",
-        toggleActions: "play none none none",
+        toggleActions: "play reverse play reverse"
       },
       opacity: 1,
       y: 0,
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
       scrollTrigger: {
         trigger: ".impact-grid",
         start: "top 80%",
-        toggleActions: "play none none none",
+        toggleActions: "play reverse play reverse"
       },
       opacity: 0,
       x: direction,

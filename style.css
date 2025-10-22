@@ -67,7 +67,7 @@ body p {
 }
 
 .background-layer {
-  background-image: url("assets/background.jpg");
+  background-image: url("assets/background.webp");
   background-size: cover;
   background-position: center bottom;
   background-attachment: fixed;
