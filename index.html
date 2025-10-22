@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agentes de IA</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="parallax.js"></script>
+    <script src="starfield.js"></script>
+    <script src="gsap-scroll-reveal.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="stars" id="starfield"></div>
+    <section class="hero-section">
+      <div class="parallax-layer background-layer" data-speed="-0.15"></div>
+
+      <img
+        src="assets/robot-right.png"
+        alt="Agente IA Robô Direita"
+        class="parallax-layer robot-left-layer"
+        data-speed="0.4"
+      />
+
+      <img
+        src="assets/robot-left.png"
+        alt="Agente IA Robô Esquerda"
+        class="parallax-layer robot-right-layer"
+        data-speed="0.4"
+      />
+
+      <div class="hero-content">
+        <h1>
+          Agentes de IA <br />
+          inteligentes
+        </h1>
+        <p>
+          Descubra como os agentes de inteligência artificial estão
+          transformando o mundo e a forma como interagimos com a tecnologia e
+          automatizamos processos complexos.
+        </p>
+
+        <!-- <a href="#section-1" class="btn-discover">Descubra Agora &rarr;</a> -->
+        <div class="scroll-indicator">↓</div>
+      </div>
+
+      <div class="fade-overlay">
+        <div class="stars" id="starfieldoverlay"></div>
+      </div>
+    </section>
+
+    <section id="section-2" class="section">
+      <div class="container">
+        <h2 class="section-title">O que são Agentes de IA?</h2>
+        <p class="intro-text">
+          Agentes de IA são sistemas autônomos capazes de perceber seu ambiente,
+          processar informações e tomar decisões para atingir objetivos
+          específicos, operando de forma independente e adaptativa. Eles são
+          definidos por suas capacidades centrais:
+        </p>
+
+        <ul class="definition-list">
+          <li>
+            <strong>Autonomia:</strong> Capacidade de agir de forma
+            independente, tomando decisões sem supervisão humana constante.
+          </li>
+          <li>
+            <strong>Percepção e Sensores:</strong> Coletam dados do ambiente,
+            seja através de sensores físicos (robôs) ou interfaces de software
+            (APIs e consultas).
+          </li>
+          <li>
+            <strong>Raciocínio e Planejamento:</strong> Usam LLMs e algoritmos
+            para analisar o contexto, planejar a sequência de ações e raciocinar
+            sobre as melhores táticas.
+          </li>
+          <li>
+            <strong>Aprendizado:</strong> Melhoram continuamente seu desempenho
+            através da experiência e feedback, adaptando-se a novos cenários.
+          </li>
+        </ul>
+        <div class="cards-grid">
+          <div class="card">
+            <div class="card-icon">🎯</div>
+            <h3>Autonomia em Ação</h3>
+            <p>
+              Tomam decisões de forma independente baseadas em seus objetivos,
+              como por exemplo otimizar uma rota logística.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-icon">👁️</div>
+            <h3>Percepção de Dados</h3>
+            <p>
+              Captam informações do ambiente através de APIs e canais de dados
+              para entender o contexto em que vão atuar.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-icon">🧠</div>
+            <h3>Resolução Complexa</h3>
+            <p>
+              Capazes de decompor e executar fluxos de tarefas complexas com
+              pouca ou nenhuma supervisão humana.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-icon">🔄</div>
+            <h3>Adaptação Dinâmica</h3>
+            <p>
+              Ajustam seu comportamento em tempo real conforme mudanças no
+              ambiente e contexto (ex: mercado ou tráfego).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="section-4" class="section">
+      <div class="container">
+        <h2 class="section-title">Aplicações Práticas</h2>
+
+        <div class="cards-grid cards-grid-2">
+          <div class="card">
+            <img src="./assets/saude.jpeg" alt="Saúde" class="card-image" />
+            <h3>Saúde</h3>
+            <p>
+              Diagnóstico médico assistido, monitoramento de pacientes em tempo
+              real, descoberta de medicamentos e análise de exames complexos.
+            </p>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/financas.jpeg"
+              alt="Finanças"
+              class="card-image"
+            />
+            <h3>Finanças</h3>
+            <p>
+              Detecção de fraudes em tempo real, trading algorítmico, assessoria
+              financeira personalizada e análise de risco avançada.
+            </p>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/transito.jpeg"
+              alt="Transporte"
+              class="card-image"
+            />
+            <h3>Transporte</h3>
+            <p>
+              Veículos autônomos, otimização dinâmica de rotas, gerenciamento
+              inteligente de tráfego urbano.
+            </p>
+          </div>
+          <div class="card">
+            <img src="./assets/varejo.jpeg" alt="Varejo" class="card-image" />
+            <h3>Varejo</h3>
+            <p>
+              Recomendação personalizada de produtos, chatbots de atendimento,
+              gestão preditiva de estoque.
+            </p>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/industria.jpeg"
+              alt="Indústria"
+              class="card-image"
+            />
+            <h3>Indústria</h3>
+            <p>
+              Manutenção preditiva de equipamentos, controle de qualidade
+              automatizado, robótica colaborativa avançada.
+            </p>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/educacao.jpeg"
+              alt="Educação"
+              class="card-image"
+            />
+            <h3>Educação</h3>
+            <p>
+              Tutores virtuais adaptativos, personalização de trilhas de
+              aprendizado, correção automática inteligente.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Impactos na Sociedade</h2>
+
+        <div class="impact-grid">
+          <div class="impact-box positive">
+            <h3>✓ Benefícios</h3>
+            <ul>
+              <li>Aumento exponencial de produtividade</li>
+              <li>Democratização de acesso a serviços especializados</li>
+              <li>Redução significativa de erros humanos</li>
+              <li>Disponibilidade ininterrupta 24/7</li>
+              <li>Avanços revolucionários em saúde e ciência</li>
+              <li>Personalização em massa de experiências</li>
+            </ul>
+          </div>
+
+          <div class="impact-box negative">
+            <h3>⚠ Desafios</h3>
+            <ul>
+              <li>Deslocamento e transformação de empregos</li>
+              <li>Questões éticas e de privacidade de dados</li>
+              <li>Viés algorítmico e discriminação</li>
+              <li>Segurança e potencial uso malicioso</li>
+              <li>Dependência excessiva de tecnologia</li>
+              <li>Ampliação da desigualdade digital</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-2" class="section">
+      <div class="container">
+        <h2 class="section-title">Futuro dos Agentes</h2>
+        <p class="intro-text">
+          Agentes de IA se tornarão assistentes pessoais altamente sofisticados,
+          capazes de entender contexto emocional, antecipar necessidades
+          individuais e trabalhar em perfeita sintonia com humanos. A integração
+          será tão natural que a linha entre assistência humana e artificial se
+          tornará cada vez mais tênue, criando uma nova era de colaboração e
+          produtividade.
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
