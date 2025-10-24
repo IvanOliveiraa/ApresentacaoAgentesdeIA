@@ -9,6 +9,7 @@ body {
   color: #fff;
   background: #000;
   z-index: 1;
+  overflow-x: hidden;
 }
 body p {
   color: #f0f8ff;
@@ -47,7 +48,7 @@ body p {
 
 .hero-section {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 150vh;
   overflow: hidden;
   display: flex;
@@ -281,15 +282,16 @@ body p {
   border-radius: 20px;
   padding: 40px;
   backdrop-filter: blur(10px);
-  transition: all 0.4s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
   opacity: 0;
-  transform: translateY(30px);
+  translate: 0 30px;
+  will-change: translate, opacity;
 }
 .card.visible {
   opacity: 1;
-  transform: translateY(0);
+  translate: 0 0;
 }
 
 .card::before {
@@ -301,11 +303,11 @@ body p {
   height: 4px;
   background: linear-gradient(90deg, #0077b6, #00b4d8);
   transform: scaleX(0);
-  transition: transform 0.4s ease;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card:hover {
-  transform: translateY(-10px);
+  translate: 0 -10px;
   border-color: #00b4d8;
   box-shadow: 0 20px 60px rgba(0, 119, 182, 0.4);
   background: rgba(0, 53, 102, 0.4);
@@ -315,24 +317,24 @@ body p {
   transform: scaleX(1);
 }
 
+.card:hover .card-image {
+  transform: scale(1.05);
+}
+
 .card-icon {
   font-size: 3.5rem;
   margin-bottom: 25px;
   filter: drop-shadow(0 0 10px rgba(0, 180, 216, 0.5));
 }
 .card-image {
-  width: calc(100% + 60px);
-  margin: -30px -30px 25px -30px;
+  width: calc(100% + 80px);
+  margin: -40px -40px 25px -40px;
   border-radius: 16px 16px 0px 0px;
   display: block;
   object-fit: cover;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card-image:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(0,  0,  0,  0.4);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
 }
 .card h3 {
   font-size: 1.8rem;

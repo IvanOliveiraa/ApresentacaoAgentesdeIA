@@ -19,6 +19,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (heroContent) {
       heroContent.style.opacity = opacity;
+
+      // Desabilita pointer-events quando rolar mais de 50% da hero section
+      if (scrollPosition > heroHeight * 0.5) {
+        heroContent.style.pointerEvents = 'none';
+      } else {
+        heroContent.style.pointerEvents = 'auto';
+      }
     }
 
     if (robotLeftLayer) {
