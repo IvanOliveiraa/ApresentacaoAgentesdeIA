@@ -231,38 +231,6 @@ body p {
   font-weight: 300;
 }
 
-.definition-list {
-  list-style: none;
-  text-align: left;
-  padding: 0;
-  max-width: 800px;
-  margin: 40px auto;
-}
-
-.definition-list li {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  padding-left: 30px;
-  position: relative;
-  color: rgba(255, 255, 255, 0.8);
-  font-weight: 300;
-}
-
-.definition-list li::before {
-  content: "»";
-  position: absolute;
-  left: 0;
-  color: #00b4d8;
-  font-size: 1.5em;
-  line-height: 1;
-  font-weight: 600;
-}
-
-.definition-list li strong {
-  color: #b1d6f8;
-  font-weight: 600;
-}
-
 .cards-grid {
   display: flex;
   gap: 40px;
