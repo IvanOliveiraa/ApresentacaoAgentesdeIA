@@ -401,3 +401,44 @@ body p {
   left: 0;
   color: #ff006e;
 }
+
+/* Final Section Background */
+.section-final {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 0;
+}
+
+.section-final::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("assets/backgroundfinal.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.section-final.visible::before {
+  opacity: 1;
+}
+.glass-container {
+  background-color: rgba(0, 0, 0, 0.308);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+  color: white;
+}

@@ -48,4 +48,18 @@ document.addEventListener("DOMContentLoaded", () => {
       ease: "cubic-bezier(0.2, 0.8, 0.2, 1)",
     });
   });
+
+  // Animação background final
+  const finalSection = document.querySelector(".section-final");
+  if (finalSection) {
+    ScrollTrigger.create({
+      trigger: finalSection,
+      start: "top 60%",
+      end: "bottom top",
+      onEnter: () => finalSection.classList.add("visible"),
+      onLeave: () => finalSection.classList.remove("visible"),
+      onEnterBack: () => finalSection.classList.add("visible"),
+      onLeaveBack: () => finalSection.classList.remove("visible"),
+    });
+  }
 });
