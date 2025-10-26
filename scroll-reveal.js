@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);
 
-  // animação sections
+  // Animação de seções
   gsap.utils.toArray(".section").forEach((section) => {
     gsap.from(section, {
       scrollTrigger: {
@@ -12,11 +12,11 @@ document.addEventListener("DOMContentLoaded", () => {
       opacity: 0,
       y: 50,
       duration: 1,
-      ease: "power3.out",
+      ease: "power3.out"
     });
   });
 
-  // Animação Cards
+  // Animação de cards
   gsap.utils.toArray(".cards-grid").forEach((grid) => {
     gsap.to(grid.querySelectorAll(".card"), {
       scrollTrigger: {
@@ -28,14 +28,13 @@ document.addEventListener("DOMContentLoaded", () => {
       y: 0,
       duration: 0.8,
       stagger: 0.15,
-      ease: "power2.out",
+      ease: "power2.out"
     });
   });
 
-  // animação impact boxes
+  // Animação de impact boxes
   gsap.utils.toArray(".impact-box").forEach((box) => {
     const direction = box.classList.contains("positive") ? -50 : 50;
-
     gsap.from(box, {
       scrollTrigger: {
         trigger: ".impact-grid",
@@ -45,11 +44,11 @@ document.addEventListener("DOMContentLoaded", () => {
       opacity: 0,
       x: direction,
       duration: 1.2,
-      ease: "cubic-bezier(0.2, 0.8, 0.2, 1)",
+      ease: "cubic-bezier(0.2, 0.8, 0.2, 1)"
     });
   });
 
-  // Animação background final
+  // Animação do background final
   const finalSection = document.querySelector(".section-final");
   if (finalSection) {
     ScrollTrigger.create({
@@ -59,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
       onEnter: () => finalSection.classList.add("visible"),
       onLeave: () => finalSection.classList.remove("visible"),
       onEnterBack: () => finalSection.classList.add("visible"),
-      onLeaveBack: () => finalSection.classList.remove("visible"),
+      onLeaveBack: () => finalSection.classList.remove("visible")
     });
   }
 });
