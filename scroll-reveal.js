@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
       opacity: 0,
       x: direction,
       duration: 1.2,
-      ease: "cubic-bezier(0.2, 0.8, 0.2, 1)"
+      ease: "power2.out"
     });
   });
 
@@ -56,8 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
       start: "top 60%",
       end: "bottom top",
       onEnter: () => finalSection.classList.add("visible"),
-      onLeave: () => finalSection.classList.remove("visible"),
-      onEnterBack: () => finalSection.classList.add("visible"),
       onLeaveBack: () => finalSection.classList.remove("visible")
     });
   }

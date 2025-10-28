@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  //declarar variaveis
   const heroHeight = window.innerHeight;
   const robotLeftLayer = document.querySelector('.robot-left-layer');
   const robotRightLayer = document.querySelector('.robot-right-layer');
@@ -10,23 +11,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollPosition = window.scrollY;
     const scrollRatio = Math.min(scrollPosition / heroHeight, 1);
 
-    // Opacidade
+    // definir Opacidade
     const opacity = 1 - scrollRatio;
 
-    // Movimento
+    // Muda Opacidade do heroContent
+    heroContent.style.opacity = opacity;
+
+
+    // definir movimento
     const yOffset = -(scrollRatio * 400);
     const xOffset = scrollRatio * 400;
 
-    if (heroContent) {
-      heroContent.style.opacity = opacity;
 
-      // Desabilita pointer-events quando rolar mais de 50% da hero section
-      if (scrollPosition > heroHeight * 0.5) {
-        heroContent.style.pointerEvents = 'none';
-      } else {
-        heroContent.style.pointerEvents = 'auto';
-      }
-    }
 
     if (robotLeftLayer) {
       robotLeftLayer.style.opacity = opacity;
@@ -47,7 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
       ticking = true;
     }
   }
-
+  //monitorar scroll
   window.addEventListener('scroll', requestTick, { passive: true });
+  // reinicia a função
   updateParallax();
 });
